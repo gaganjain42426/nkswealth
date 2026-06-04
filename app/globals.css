@@ -1,26 +1,140 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ─── Design System Tokens ────────────────────────────────────────────────── */
+@theme {
+  /* Brand Colors */
+  --color-primary: #001456;
+  --color-primary-container: #1a2b6d;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #8695dd;
+  --color-primary-fixed: #dde1ff;
+  --color-primary-fixed-dim: #b8c3ff;
+  --color-on-primary-fixed: #001355;
+  --color-inverse-primary: #b8c3ff;
+
+  /* Accent Colors */
+  --color-gold-accent: #c9a84c;
+  --color-growth-teal: #2d9c8e;
+  --color-charcoal-text: #1c1c2e;
+
+  /* Surface Scale */
+  --color-surface: #fbf9f5;
+  --color-surface-bright: #fbf9f5;
+  --color-surface-dim: #dbdad6;
+  --color-surface-variant: #e4e2de;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f5f3ef;
+  --color-surface-container: #efeeea;
+  --color-surface-container-high: #eae8e4;
+  --color-surface-container-highest: #e4e2de;
+
+  /* Background & On-Surface */
+  --color-background: #fbf9f5;
+  --color-on-surface: #1b1c1a;
+  --color-on-surface-variant: #454650;
+  --color-inverse-surface: #30312e;
+  --color-inverse-on-surface: #f2f0ed;
+
+  /* Outline */
+  --color-outline: #767681;
+  --color-outline-variant: #c6c5d2;
+
+  /* Secondary / Tertiary */
+  --color-secondary-container: #fed977;
+  --color-tertiary-container: #003832;
+  --color-on-tertiary-container: #3ea99b;
+
+  /* Error */
+  --color-error: #ba1a1a;
+
+  /* Typography */
+  --font-playfair: var(--font-playfair-nf), Georgia, "Times New Roman", serif;
+  --font-inter: var(--font-inter-nf), system-ui, -apple-system, sans-serif;
+
+  /* Shadows */
+  --shadow-indigo-soft: 0px 4px 20px rgba(26, 43, 109, 0.05);
+  --shadow-indigo-medium: 0px 10px 30px rgba(26, 43, 109, 0.1);
+  --shadow-gold-glow: 0 0 20px rgba(201, 168, 76, 0.35);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* ─── Base Styles ─────────────────────────────────────────────────────────── */
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: rgba(201, 168, 76, 0.3);
+  color: var(--color-primary);
+}
+
+/* ─── News Ticker ─────────────────────────────────────────────────────────── */
+.ticker-wrap { width: 100%; overflow: hidden; }
+
+.ticker {
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 100%;
+  animation: ticker 38s linear infinite;
+}
+
+.ticker:hover { animation-play-state: paused; }
+
+.ticker-item { display: inline-block; padding: 0 2rem; }
+
+@keyframes ticker {
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+
+/* ─── Scroll Reveal ───────────────────────────────────────────────────────── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Range Slider ────────────────────────────────────────────────────────── */
+input[type="range"] { -webkit-appearance: none; width: 100%; background: transparent; }
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 4px;
+  background: var(--color-primary-fixed);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background: var(--color-gold-accent);
+  cursor: pointer;
+  margin-top: -9px;
+  box-shadow: 0 2px 6px rgba(201, 168, 76, 0.4);
+  transition: transform 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.1); }
+
+input[type="range"]::-moz-range-track {
+  height: 4px;
+  background: var(--color-primary-fixed);
+  border-radius: 2px;
+}
+input[type="range"]::-moz-range-thumb {
+  height: 22px; width: 22px;
+  border-radius: 50%;
+  background: var(--color-gold-accent);
+  cursor: pointer; border: none;
 }
