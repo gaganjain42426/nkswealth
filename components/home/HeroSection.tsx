@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import NewsTicker from "./NewsTicker";
+import { SITE } from "@/lib/data/site";
 
 export default function HeroSection() {
   return (
@@ -26,16 +26,19 @@ export default function HeroSection() {
         </h1>
         <p className="text-lg md:text-xl text-primary-fixed-dim mb-10 max-w-2xl mx-auto leading-relaxed">
           AMFI-registered wealth management tailored for high-net-worth
-          individuals. Experience stable growth guided by institutional expertise
-          and personalised concierge service.
+          individuals, business owners and working professionals. Experience
+          stable growth guided by institutional expertise and personalised
+          service.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-          <Link
-            href="/contact"
+          <a
+            href={SITE.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-gold-accent text-white font-semibold px-8 py-3.5 rounded hover:bg-gold-accent/90 transition-all duration-300 w-full sm:w-auto text-center"
           >
             Start Your Journey
-          </Link>
+          </a>
           <Link
             href="/services"
             className="border border-white text-white font-semibold px-8 py-3.5 rounded hover:bg-white hover:text-primary transition-all duration-300 w-full sm:w-auto text-center"
@@ -43,11 +46,6 @@ export default function HeroSection() {
             Explore Services
           </Link>
         </div>
-      </div>
-
-      {/* Ticker pinned to bottom */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <NewsTicker />
       </div>
     </section>
   );

@@ -3,21 +3,30 @@ import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import ContactForm from "@/components/contact/ContactForm";
 import FAQAccordion from "@/components/contact/FAQAccordion";
+import { SITE } from "@/lib/data/site";
 
 export const metadata: Metadata = {
   title: "Contact NKS Wealth | Schedule a Free Consultation",
   description:
-    "Schedule a complimentary consultation with a dedicated wealth advisor. Minimum portfolio ₹5 Crore. Mumbai office and virtual meetings available.",
+    "Schedule a complimentary consultation with a dedicated wealth advisor. Jaipur office and virtual meetings available.",
 };
 
 const CONTACT_ITEMS = [
   {
     icon: "location_on",
-    label: "Corporate Office",
-    value: "123 Financial District,\nMumbai, Maharashtra 400001",
+    label: "Registered Office",
+    value: `${SITE.legalName},\n${SITE.address.line1},\n${SITE.address.line2}`,
   },
-  { icon: "call", label: "Direct Line", value: "+91 22 4567 8900" },
-  { icon: "mail", label: "Email Connect", value: "advisory@nkswealth.com" },
+  {
+    icon: "call",
+    label: "Direct Line",
+    value: `${SITE.phonePrimary} / ${SITE.phoneSecondary}`,
+  },
+  {
+    icon: "mail",
+    label: "Email Connect",
+    value: `${SITE.emailNikhil}, ${SITE.emailShubham}`,
+  },
 ];
 
 export default function ContactPage() {
@@ -73,7 +82,7 @@ export default function ContactPage() {
               <div className="relative w-full h-60 rounded-xl overflow-hidden shadow-indigo-soft border border-on-surface/5 group">
                 <Image
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDleGkEzkfX6RbT8-TiIpiH3DBxLbqLX6iS6HALzsiYqnQw2XkpsOYmOgB7HNQQMA-DU3ymMFRlFjfUgB590QFW1y3RDMLl7nBc64kF-5VW2Q6nL72pUzG332d1h4Z2-kVcWzC50l1V21bs-hpFAnwf-Yw_Aii7NHs4bqIlfqEgK0O5SNdufMfSfvzygeDmLsTVNgCUAEdkUYenr-OZteYW3-lPcCndS8zZvnRraidg46DbpnAhUi6jjpZYpOBGoCaUvBDwLtYjBBY"
-                  alt="NKS Wealth Mumbai Office Location"
+                  alt="NKS Wealth Jaipur Office Location"
                   fill
                   className="object-cover filter grayscale opacity-60 mix-blend-multiply group-hover:scale-105 transition-transform duration-700"
                   sizes="(max-width: 1024px) 100vw, 40vw"

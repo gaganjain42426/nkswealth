@@ -5,10 +5,6 @@ import ServicesGrid from "@/components/home/ServicesGrid";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import TeamPreview from "@/components/home/TeamPreview";
 import FounderQuote from "@/components/home/FounderQuote";
-import InsightsSection from "@/components/home/InsightsSection";
-import SIPCalculator from "@/components/home/SIPCalculator";
-import RecognitionBar from "@/components/home/RecognitionBar";
-import PressTicker from "@/components/home/PressTicker";
 import ContactSection from "@/components/home/ContactSection";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import Link from "next/link";
@@ -16,7 +12,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "NKS Wealth | Premium Wealth Management for HNIs",
   description:
-    "AMFI-registered mutual fund distributor. Expert SIP, ELSS, goal-based planning and NRI investment advisory with 15+ years experience. Start your wealth journey today.",
+    "AMFI-registered mutual fund distributor. Expert SIP, goal-based planning, NRI investments and insurance advisory with 20 years of market experience. Start your wealth journey today.",
 };
 
 export default function HomePage() {
@@ -67,35 +63,10 @@ export default function HomePage() {
       <WhyChooseUs />
       <TeamPreview />
       <FounderQuote
-        quote="We don't just distribute mutual funds — we build long-term relationships built on trust, transparency, and results."
+        quote="We don't just distribute products — we build long-term relationships built on trust, transparency, and results."
         author="Nikhil Shah"
         title="Founder, NKS Wealth"
       />
-      <InsightsSection />
-      <SIPCalculator />
-      <RecognitionBar />
-      <PressTicker />
-
-      {/* Careers CTA */}
-      <section className="py-20 bg-surface-container text-center">
-        <div className="max-w-3xl mx-auto px-5">
-          <ScrollReveal>
-            <h2 className="font-playfair text-4xl font-semibold text-primary mb-4">
-              Build Your Career With Us
-            </h2>
-            <p className="text-on-surface-variant text-lg mb-8">
-              We are always looking for passionate, driven individuals to join
-              our growing team of wealth experts.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block border border-primary text-primary font-bold text-sm uppercase tracking-wider px-8 py-3 rounded hover:bg-primary hover:text-white transition-colors"
-            >
-              View Open Positions
-            </Link>
-          </ScrollReveal>
-        </div>
-      </section>
 
       <ContactSection />
     </>

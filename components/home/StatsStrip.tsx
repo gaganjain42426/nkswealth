@@ -1,9 +1,9 @@
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const STATS = [
-  { value: "₹500", suffix: "Cr+", label: "Assets Under Management" },
-  { value: "1200", suffix: "+", label: "Satisfied Investors" },
-  { value: "15", suffix: "Yrs", label: "Market Experience" },
+  { value: "₹100", suffix: "Cr+", label: "Assets Under Management" },
+  { value: "700", suffix: "+", label: "Satisfied Investors" },
+  { value: "20", suffix: "Yrs", label: "Market Experience" },
   { value: "100", suffix: "%", label: "Unbiased Advice" },
 ];
 

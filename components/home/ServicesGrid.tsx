@@ -17,7 +17,7 @@ export default function ServicesGrid() {
         </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {SERVICES.map((service, i) => (
+          {SERVICES.filter((service) => !service.hideOnHome).map((service, i) => (
             <ScrollReveal key={service.id} delay={i * 60}>
               <div className="group relative overflow-hidden rounded-lg aspect-[4/3]">
                 <Image

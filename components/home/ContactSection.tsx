@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { SITE } from "@/lib/data/site";
 
 const SERVICE_OPTIONS = [
   "Mutual Funds",
@@ -32,21 +33,27 @@ export default function ContactSection() {
                 <div className="flex items-start gap-4">
                   <span className="material-symbols-outlined text-gold-accent">location_on</span>
                   <div>
-                    <p className="font-semibold mb-1">Our Office</p>
+                    <p className="font-semibold mb-1">Registered Office</p>
                     <p className="text-primary-fixed-dim">
-                      123 Financial District, Nariman Point,
+                      {SITE.legalName},
                       <br />
-                      Mumbai, Maharashtra 400001
+                      {SITE.address.line1},
+                      <br />
+                      {SITE.address.line2}
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <span className="material-symbols-outlined text-gold-accent">call</span>
-                  <p className="text-primary-fixed-dim">+91 22 4567 8900</p>
+                  <p className="text-primary-fixed-dim">
+                    {SITE.phonePrimary} / {SITE.phoneSecondary}
+                  </p>
                 </div>
                 <div className="flex items-center gap-4">
                   <span className="material-symbols-outlined text-gold-accent">mail</span>
-                  <p className="text-primary-fixed-dim">advisory@nkswealth.com</p>
+                  <p className="text-primary-fixed-dim">
+                    {SITE.emailNikhil}, {SITE.emailShubham}
+                  </p>
                 </div>
               </div>
             </ScrollReveal>

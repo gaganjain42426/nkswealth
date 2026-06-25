@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | NKS Wealth",
   },
   description:
-    "AMFI-registered wealth management tailored for high-net-worth individuals. Expert SIP, ELSS, goal-based planning and NRI investment advisory with 15+ years of experience.",
+    "AMFI-registered wealth management tailored for high-net-worth individuals, business owners and working professionals. Expert SIP, goal-based planning and NRI investment advisory with 20 years of market experience.",
   keywords: [
     "wealth management",
     "mutual fund distributor",

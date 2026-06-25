@@ -45,7 +45,7 @@ export default function TeamPreview() {
 
         <ScrollReveal className="text-center mt-12">
           <Link
-            href="/team"
+            href="/about#team"
             className="inline-block border border-primary text-primary text-sm font-semibold px-8 py-3 rounded hover:bg-primary hover:text-white transition-colors duration-300"
           >
             Meet the Full Team

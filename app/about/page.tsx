@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import FounderQuote from "@/components/home/FounderQuote";
+import { TEAM_MEMBERS } from "@/lib/data/team";
 
 export const metadata: Metadata = {
-  title: "About NKS Wealth | Our Story & Philosophy",
+  title: "About NKS Wealth | Our Story, Philosophy & Team",
   description:
-    "Built on integrity, transparency, and results. Learn how NKS Wealth has guided high-net-worth families across India for over a decade.",
+    "Built on integrity, transparency, and results. Meet the NKS Wealth founding team and learn how we have guided high-net-worth families across India for over a decade.",
 };
 
 const PILLARS = [
@@ -208,6 +209,51 @@ export default function AboutPage() {
               </div>
             </ScrollReveal>
           ))}
+        </div>
+      </section>
+
+      {/* Team */}
+      <section id="team" className="bg-surface-container py-24 px-5 md:px-20 scroll-mt-24">
+        <div className="max-w-[1280px] mx-auto">
+          <ScrollReveal className="text-center mb-14 max-w-2xl mx-auto">
+            <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">
+              Our Team
+            </p>
+            <h2 className="font-playfair text-4xl font-semibold text-charcoal-text mb-4">
+              Wealth Experts You Can Trust
+            </h2>
+            <p className="text-on-surface-variant leading-relaxed">
+              Meet the leadership driving our vision forward.
+            </p>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {TEAM_MEMBERS.map((member, i) => (
+              <ScrollReveal key={member.id} delay={i * 100}>
+                <article className="bg-surface rounded-lg p-3 shadow-indigo-soft border border-charcoal-text/5 group hover:-translate-y-1 transition-transform duration-300 h-full">
+                  <div className="w-full aspect-[4/5] rounded overflow-hidden bg-surface-variant mb-4">
+                    <Image
+                      src={member.imageSrc}
+                      alt={member.imageAlt}
+                      width={480}
+                      height={600}
+                      className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
+                    />
+                  </div>
+                  <div className="px-2 pb-3">
+                    <h3 className="font-playfair text-2xl font-semibold text-primary mb-1">
+                      {member.name}
+                    </h3>
+                    <p className="text-xs font-bold uppercase tracking-wider text-gold-accent mb-4">
+                      {member.role}
+                    </p>
+                    <p className="text-sm text-on-surface-variant leading-relaxed">
+                      {member.bio}
+                    </p>
+                  </div>
+                </article>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </section>
 

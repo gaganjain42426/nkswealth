@@ -5,6 +5,8 @@ export interface Service {
   description: string;
   imageSrc: string;
   imageAlt: string;
+  /** When true, the service is omitted from the homepage services grid. */
+  hideOnHome?: boolean;
 }
 
 export const SERVICES: Service[] = [
@@ -29,6 +31,16 @@ export const SERVICES: Service[] = [
     imageAlt: "Lump Sum Investments",
   },
   {
+    id: "gift-city",
+    icon: "apartment",
+    title: "GIFT City | SIF | AIF | PMS",
+    description:
+      "Access sophisticated investment vehicles — GIFT City offerings, Specialised Investment Funds (SIF), Alternative Investment Funds (AIF), and Portfolio Management Services (PMS) — structured for discerning, high-net-worth portfolios.",
+    imageSrc:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDwSd6pzQeJ7XqBB_OgAtQWPeIN2nCxnePTt4uu4w8CxTqVNf6evC9x2bCe-NHbmkZwXMda9mM983aiJlunIrem3irBsGRUj3Qf16LV04ywJZMixfLYVE_jLhOKK55XxZG8BnnFc6uydQLQ-mde8HFWFo0Ox5HWOgFZQ9QEjGjLAg2l0FMjPDpwRhvoB2NhdEPvt0-POB99c-HqXJiEgLDStZaYDQS3pg6rLNFAxDZCdWQHu2vXHSnJUnYwKsKn8jfYXb7wd6K8jxM",
+    imageAlt: "GIFT City, SIF, AIF and PMS solutions",
+  },
+  {
     id: "elss",
     icon: "savings",
     title: "Tax Saving (ELSS)",
@@ -37,6 +49,7 @@ export const SERVICES: Service[] = [
     imageSrc:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuDwSd6pzQeJ7XqBB_OgAtQWPeIN2nCxnePTt4uu4w8CxTqVNf6evC9x2bCe-NHbmkZwXMda9mM983aiJlunIrem3irBsGRUj3Qf16LV04ywJZMixfLYVE_jLhOKK55XxZG8BnnFc6uydQLQ-mde8HFWFo0Ox5HWOgFZQ9QEjGjLAg2l0FMjPDpwRhvoB2NhdEPvt0-POB99c-HqXJiEgLDStZaYDQS3pg6rLNFAxDZCdWQHu2vXHSnJUnYwKsKn8jfYXb7wd6K8jxM",
     imageAlt: "Tax Saving ELSS",
+    hideOnHome: true,
   },
   {
     id: "goal-based",
@@ -67,6 +80,16 @@ export const SERVICES: Service[] = [
     imageSrc:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuDgf8iBACH-17CVFak3rmFCFYN416GuHZySf0y_WtrecbWwYPAshHoufe3GqsuMUqSNCQnFhvvd24zXFKTCo6gSld-vCqbgKSJE3gMTMPth1QYfe84cCQTw4d84hJFVoC0xJvRKe7tHS8VnV1Didx6AyCvUVQ7eJimTP5IcjKFXTSxnzpqvhEpVU6fQ5dm1rIEcR_q5d_6xT1-OMI_FpEYswp2CCSyCSjtBt9yJSbvdP2Wx_BkOhbkVwFhn31-8reDoUsQ4IsWX1so",
     imageAlt: "Portfolio Review",
+  },
+  {
+    id: "insurance",
+    icon: "shield",
+    title: "Insurance",
+    description:
+      "Protect what matters most with curated life, health, and general insurance solutions that safeguard your family's financial future and complement your long-term wealth strategy.",
+    imageSrc:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCcJaE5gSWHILBk_yjmtpSY_jvAhxkApw5XM0H_ms8jyECz8kaRkHy8QArfkqk2E_wc7ICovyLmZSSLhwbcv8A0Ic0DnniS_wt98tRTHpjIJYRKxnxd5TqWf2SyE8l1OAecP3myp4MPoj6WNVQuj4-FPOeSmku6HUB-m3ZLYOSDRDVKkny_jaHbPgCFdcczYPfwrFsbOFP9to1dGi8ZBxE99gEOVXffvkN6ZMi-7q5W5Rhi03fuzuCJ3lgMX6aX2FjbenUrGH17VZQ",
+    imageAlt: "Insurance solutions",
   },
 ];
 
