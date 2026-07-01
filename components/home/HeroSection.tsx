@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { SITE } from "@/lib/data/site";
 
 export default function HeroSection() {
   return (
@@ -31,16 +30,14 @@ export default function HeroSection() {
           service.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-          <a
-            href={SITE.whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/contact"
             className="bg-gold-accent text-white font-semibold px-8 py-3.5 rounded hover:bg-gold-accent/90 transition-all duration-300 w-full sm:w-auto text-center"
           >
             Start Your Journey
-          </a>
+          </Link>
           <Link
-            href="/services"
+            href="/#services"
             className="border border-white text-white font-semibold px-8 py-3.5 rounded hover:bg-white hover:text-primary transition-all duration-300 w-full sm:w-auto text-center"
           >
             Explore Services

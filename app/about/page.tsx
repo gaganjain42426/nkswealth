@@ -56,7 +56,7 @@ const WHY_CARDS = [
   {
     icon: "gavel",
     title: "Unbiased, Independent Advice",
-    desc: "As SEBI Registered Investment Advisers, we have no proprietary products to push. Our recommendations are driven solely by what serves your mandate best.",
+    desc: "As AMFI Registered Mutual Fund Advisors, we have no proprietary products to push. Our recommendations are driven solely by what serves your mandate best.",
   },
 ];
 
@@ -175,19 +175,13 @@ export default function AboutPage() {
 
       {/* Why Choose Us */}
       <section className="py-24 px-5 md:px-20 max-w-[1280px] mx-auto">
-        <ScrollReveal className="mb-14 flex flex-col md:flex-row justify-between items-end gap-5">
-          <div className="max-w-xl">
-            <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">
-              The NKS Advantage
-            </p>
-            <h2 className="font-playfair text-4xl font-semibold text-charcoal-text">
-              Why Choose Us
-            </h2>
-          </div>
-          <p className="text-on-surface-variant max-w-md text-sm leading-relaxed">
-            We combine the sophisticated capabilities of an institutional firm
-            with the highly personalised touch of a boutique family office.
+        <ScrollReveal className="mb-14">
+          <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">
+            The NKS Advantage
           </p>
+          <h2 className="font-playfair text-4xl font-semibold text-charcoal-text">
+            Why Choose Us
+          </h2>
         </ScrollReveal>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {WHY_CARDS.map((card, i) => (

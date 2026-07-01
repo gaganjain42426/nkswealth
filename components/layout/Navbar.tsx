@@ -4,12 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils/cn";
+import { SITE } from "@/lib/data/site";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
-  { href: "/services", label: "Services" },
-  { href: "/insights", label: "Insights" },
+  { href: "/#services", label: "Services" },
   { href: "/contact", label: "Contact Us" },
 ];
 
@@ -75,8 +75,24 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* CTA + Hamburger */}
+          {/* Contact shortcuts + CTA + Hamburger */}
           <div className="flex items-center gap-3">
+            <a
+              href={`tel:${SITE.phonePrimaryTel}`}
+              className="hidden lg:inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-gold-accent transition-colors"
+            >
+              <span className="material-symbols-outlined text-lg">call</span>
+              {SITE.phonePrimary}
+            </a>
+            <a
+              href={SITE.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat with us on WhatsApp"
+              className="hidden md:inline-flex items-center justify-center w-10 h-10 rounded-full bg-growth-teal/10 text-growth-teal hover:bg-growth-teal hover:text-white transition-colors"
+            >
+              <span className="material-symbols-outlined text-xl">chat</span>
+            </a>
             <Link
               href="/contact"
               className="hidden md:inline-flex items-center justify-center bg-primary text-white text-sm font-semibold px-6 py-2.5 rounded border border-transparent hover:border-gold-accent hover:shadow-gold-glow transition-all duration-300"
@@ -128,6 +144,24 @@ export default function Navbar() {
         >
           Start Investing
         </Link>
+        <div className="mt-4 grid grid-cols-2 gap-3">
+          <a
+            href={`tel:${SITE.phonePrimaryTel}`}
+            className="flex items-center justify-center gap-2 border border-primary/20 text-primary py-3 rounded font-semibold text-sm"
+          >
+            <span className="material-symbols-outlined text-lg">call</span>
+            Call
+          </a>
+          <a
+            href={SITE.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 bg-growth-teal text-white py-3 rounded font-semibold text-sm"
+          >
+            <span className="material-symbols-outlined text-lg">chat</span>
+            WhatsApp
+          </a>
+        </div>
       </div>
     </>
   );

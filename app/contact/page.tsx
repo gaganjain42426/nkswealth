@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import ContactForm from "@/components/contact/ContactForm";
 import FAQAccordion from "@/components/contact/FAQAccordion";
 import { SITE } from "@/lib/data/site";
 
@@ -96,18 +95,57 @@ export default function ContactPage() {
             </ScrollReveal>
           </div>
 
-          {/* Right: Contact Form */}
+          {/* Right: Direct contact actions */}
           <div className="lg:col-span-7">
             <ScrollReveal delay={60}>
               <div className="bg-surface-container-lowest p-8 md:p-10 rounded-xl shadow-indigo-soft border border-charcoal-text/5">
                 <h3 className="font-playfair text-3xl font-semibold text-primary mb-2">
-                  Schedule a Consultation
+                  Talk to an Advisor
                 </h3>
                 <p className="text-sm text-on-surface-variant mb-8 leading-relaxed">
-                  Provide your details below, and a dedicated relationship
-                  manager will reach out within 24 hours.
+                  No lengthy forms. Reach us the way you prefer — call, WhatsApp,
+                  or email — and a dedicated advisor will get back to you.
                 </p>
-                <ContactForm />
+                <div className="space-y-4">
+                  <a
+                    href={SITE.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 w-full bg-growth-teal text-white px-6 py-5 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                  >
+                    <span className="material-symbols-outlined text-2xl">chat</span>
+                    <span>
+                      <span className="block text-base">Chat on WhatsApp</span>
+                      <span className="block text-xs font-normal opacity-90">
+                        Fastest way to reach us
+                      </span>
+                    </span>
+                  </a>
+                  <a
+                    href={`tel:${SITE.phonePrimaryTel}`}
+                    className="flex items-center gap-4 w-full bg-primary text-white px-6 py-5 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                  >
+                    <span className="material-symbols-outlined text-2xl">call</span>
+                    <span>
+                      <span className="block text-base">Call an Advisor</span>
+                      <span className="block text-xs font-normal opacity-90">
+                        {SITE.phonePrimary} / {SITE.phoneSecondary}
+                      </span>
+                    </span>
+                  </a>
+                  <a
+                    href={`mailto:${SITE.emailNikhil}`}
+                    className="flex items-center gap-4 w-full border border-primary/20 text-primary px-6 py-5 rounded-lg font-semibold hover:border-gold-accent hover:text-gold-accent transition-colors"
+                  >
+                    <span className="material-symbols-outlined text-2xl">mail</span>
+                    <span>
+                      <span className="block text-base">Email Us</span>
+                      <span className="block text-xs font-normal opacity-70">
+                        {SITE.emailNikhil}, {SITE.emailShubham}
+                      </span>
+                    </span>
+                  </a>
+                </div>
               </div>
             </ScrollReveal>
           </div>

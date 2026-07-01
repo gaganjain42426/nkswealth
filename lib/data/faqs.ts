@@ -18,10 +18,10 @@ export const FAQS: FAQ[] = [
       "The initial meeting is an exploratory dialogue. We focus on understanding your financial history, current obligations, risk tolerance, and long-term aspirations. There is no obligation or fee for this introductory phase.",
   },
   {
-    id: "fiduciary",
-    question: "Are your advisors fiduciaries?",
+    id: "unbiased-advice",
+    question: "How do you keep your advice unbiased?",
     answer:
-      "Yes. As SEBI Registered Investment Advisers, we operate strictly under a fiduciary standard. This means we are legally and ethically obligated to place your financial interests above our own in all recommendations.",
+      "As AMFI Registered Mutual Fund Advisors, we have no proprietary products to push. Our recommendations are driven solely by what serves your mandate best, with full disclosure of how we are compensated.",
   },
   {
     id: "onboarding-time",

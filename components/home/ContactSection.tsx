@@ -1,19 +1,9 @@
-import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { SITE } from "@/lib/data/site";
 
-const SERVICE_OPTIONS = [
-  "Mutual Funds",
-  "Portfolio Review",
-  "Goal Planning",
-  "Tax Saving (ELSS)",
-  "NRI Investments",
-  "Other",
-];
-
 export default function ContactSection() {
   return (
-    <section className="bg-surface" id="contact">
+    <section className="bg-surface scroll-mt-24" id="contact">
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
         {/* Info panel */}
         <div className="bg-primary text-white p-12 md:p-24 flex flex-col justify-center relative overflow-hidden">
@@ -60,46 +50,41 @@ export default function ContactSection() {
           </div>
         </div>
 
-        {/* Form */}
+        {/* Quick contact actions */}
         <div className="p-12 md:p-24 flex flex-col justify-center bg-white">
           <div className="max-w-md mx-auto w-full">
-            <h3 className="font-playfair text-2xl font-semibold text-primary mb-8">
-              Request a Callback
+            <h3 className="font-playfair text-2xl font-semibold text-primary mb-3">
+              Reach Us Directly
             </h3>
-            <form action="/contact" className="space-y-6">
-              {[
-                { label: "Full Name", type: "text", name: "name" },
-                { label: "Email Address", type: "email", name: "email" },
-                { label: "Phone Number", type: "tel", name: "phone" },
-              ].map((field) => (
-                <div key={field.name}>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-2">
-                    {field.label}
-                  </label>
-                  <input
-                    type={field.type}
-                    name={field.name}
-                    className="w-full border-b border-surface-variant py-2 focus:outline-none focus:border-primary transition-colors bg-transparent text-sm"
-                  />
-                </div>
-              ))}
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-2">
-                  How can we help?
-                </label>
-                <select className="w-full border-b border-surface-variant py-2 focus:outline-none focus:border-primary transition-colors bg-transparent text-sm">
-                  {SERVICE_OPTIONS.map((opt) => (
-                    <option key={opt}>{opt}</option>
-                  ))}
-                </select>
-              </div>
-              <Link
-                href="/contact"
-                className="block w-full bg-gold-accent text-white text-center py-4 rounded text-xs font-bold uppercase tracking-wider hover:bg-gold-accent/90 transition-colors mt-4"
+            <p className="text-sm text-on-surface-variant mb-8 leading-relaxed">
+              No forms, no waiting. Call, message us on WhatsApp, or drop an
+              email and a dedicated advisor will get back to you.
+            </p>
+            <div className="space-y-4">
+              <a
+                href={SITE.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 w-full bg-growth-teal text-white px-6 py-4 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity"
               >
-                Submit Request
-              </Link>
-            </form>
+                <span className="material-symbols-outlined">chat</span>
+                Chat on WhatsApp
+              </a>
+              <a
+                href={`tel:${SITE.phonePrimaryTel}`}
+                className="flex items-center gap-4 w-full bg-primary text-white px-6 py-4 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity"
+              >
+                <span className="material-symbols-outlined">call</span>
+                Call {SITE.phonePrimary}
+              </a>
+              <a
+                href={`mailto:${SITE.emailPrimary}`}
+                className="flex items-center gap-4 w-full border border-primary/20 text-primary px-6 py-4 rounded-lg font-semibold text-sm hover:border-gold-accent hover:text-gold-accent transition-colors"
+              >
+                <span className="material-symbols-outlined">mail</span>
+                Email {SITE.emailPrimary}
+              </a>
+            </div>
           </div>
         </div>
       </div>

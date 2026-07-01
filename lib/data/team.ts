@@ -23,7 +23,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     id: "shubham-shah",
     name: "Shubham Shah",
     role: "Co-Founder & Chief Growth Officer",
-    bio: "Shubham leads the growth, brand, and strategic expansion initiatives at NKS Wealth. He is responsible for building the firm's market presence, client acquisition systems, strategic partnerships, and overall growth strategy.",
+    bio: "Shubham leads the growth, brand, and strategic expansion initiatives at NKS Wealth. He is responsible for building the firm's market presence, client acquisition systems, strategic partnerships, and overall growth strategy. He has done his MBA from IIM Kashipur and leads a sales function at one of the country's unicorn fintech companies.",
     linkedIn: "#",
     imageSrc:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuAMw0dnXDrEDr3D4Jy6r3HKPtiFO8K2dPglw2UZ7hDlENPIH7Md0m24ZXkXo8j1c76xhCELki-MSTXwJYSPPtV7eQNqU4-fdYA3fbMqJwHhBVwSAQoJXs5nle-vhCgLyTWAcokqu3buHpauXRQpntWo4BdEVxwoa1hoF4TDxsRkCHpAT220yKmnsjz5RVi-CXLQW4susSlHmNeKqK9Sn9bmfqSEFr-7dH3w1_-X4PpOPK-bQPvzWafUcYrlRhjCnFF1hvuMr8JNQHw",

@@ -3,8 +3,7 @@ import { SITE } from "@/lib/data/site";
 
 const EXPLORE_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
-  { href: "/insights", label: "Insights" },
+  { href: "/#services", label: "Services" },
   { href: "/about", label: "Our Story" },
   { href: "/about#team", label: "Our Team" },
   { href: "/contact", label: "Contact" },
@@ -14,9 +13,9 @@ export default function Footer() {
   return (
     <footer className="bg-primary text-white">
       <div className="max-w-[1280px] mx-auto px-5 md:px-20 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           {/* Brand */}
-          <div className="md:col-span-2">
+          <div className="md:col-span-5">
             <p className="font-playfair text-3xl font-bold text-gold-accent mb-4">
               NKS Wealth
             </p>
@@ -24,43 +23,15 @@ export default function Footer() {
               Guiding your financial future with institutional expertise and
               personalised care. AMFI-registered mutual fund distributor.
             </p>
-            <p className="text-sm text-on-primary-container leading-relaxed max-w-sm mb-6">
+            <p className="text-sm text-on-primary-container leading-relaxed max-w-sm">
               We are not agents. We are not salespeople. We are long-term
               thinking partners for families and founders who want clarity over
               noise.
             </p>
-            <address className="not-italic text-sm text-on-primary-container space-y-1">
-              <p className="font-semibold text-white">{SITE.legalName}</p>
-              <p>{SITE.address.line1}</p>
-              <p>{SITE.address.line2}</p>
-              <p className="mt-3">
-                <a
-                  href={`mailto:${SITE.emailHello}`}
-                  className="hover:text-white transition-colors"
-                >
-                  {SITE.emailHello}
-                </a>
-              </p>
-              <p>
-                <a
-                  href={`tel:${SITE.phonePrimaryTel}`}
-                  className="hover:text-white transition-colors"
-                >
-                  {SITE.phonePrimary}
-                </a>{" "}
-                /{" "}
-                <a
-                  href={`tel:${SITE.phoneSecondaryTel}`}
-                  className="hover:text-white transition-colors"
-                >
-                  {SITE.phoneSecondary}
-                </a>
-              </p>
-            </address>
           </div>
 
           {/* Explore */}
-          <div>
+          <div className="md:col-span-3">
             <h4 className="font-playfair text-lg font-semibold mb-5">Explore</h4>
             <ul className="space-y-3">
               {EXPLORE_LINKS.map(({ href, label }) => (
@@ -76,55 +47,54 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Reach Us */}
-          <div>
-            <h4 className="font-playfair text-lg font-semibold mb-5">Reach Us</h4>
-            <ul className="space-y-3 text-sm">
-              <li>
+          {/* Contact Us */}
+          <div className="md:col-span-4">
+            <h4 className="font-playfair text-lg font-semibold mb-5">Contact Us</h4>
+            <address className="not-italic text-sm text-on-primary-container space-y-3">
+              <p className="flex gap-3">
+                <span className="material-symbols-outlined text-gold-accent text-lg shrink-0">
+                  location_on
+                </span>
+                <span>
+                  {SITE.legalName}, {SITE.address.line1}, {SITE.address.line2}
+                </span>
+              </p>
+              <p className="flex gap-3">
+                <span className="material-symbols-outlined text-gold-accent text-lg shrink-0">
+                  call
+                </span>
+                <span>
+                  <a href={`tel:${SITE.phonePrimaryTel}`} className="hover:text-white transition-colors">
+                    {SITE.phonePrimary}
+                  </a>{" "}
+                  /{" "}
+                  <a href={`tel:${SITE.phoneSecondaryTel}`} className="hover:text-white transition-colors">
+                    {SITE.phoneSecondary}
+                  </a>
+                </span>
+              </p>
+              <p className="flex gap-3">
+                <span className="material-symbols-outlined text-gold-accent text-lg shrink-0">
+                  mail
+                </span>
+                <a href={`mailto:${SITE.emailHello}`} className="hover:text-white transition-colors">
+                  {SITE.emailHello}
+                </a>
+              </p>
+              <p className="flex gap-3">
+                <span className="material-symbols-outlined text-gold-accent text-lg shrink-0">
+                  chat
+                </span>
                 <a
                   href={SITE.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-on-primary-container hover:text-white transition-colors"
-                >
-                  WhatsApp →
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`mailto:${SITE.emailHello}`}
-                  className="text-on-primary-container hover:text-white transition-colors"
-                >
-                  {SITE.emailHello}
-                </a>
-              </li>
-              <li className="text-on-primary-container">{SITE.city}</li>
-            </ul>
-
-            <div className="mt-6 text-xs text-on-primary-container/80 space-y-1.5 leading-relaxed">
-              <p>
-                AMFI Registered Mutual Fund Distributor · {SITE.arn}
-              </p>
-              <p>Initial Registration · {SITE.arnInitialRegistration}</p>
-              <p>Current Validity · {SITE.arnValidity}</p>
-              <p>Grievance Officer · {SITE.grievanceOfficer}</p>
-              <p>
-                <a
-                  href={`tel:${SITE.phonePrimaryTel}`}
                   className="hover:text-white transition-colors"
                 >
-                  {SITE.phonePrimary}
+                  Chat on WhatsApp →
                 </a>
               </p>
-              <p>
-                <a
-                  href={`mailto:${SITE.emailPrimary}`}
-                  className="hover:text-white transition-colors"
-                >
-                  {SITE.emailPrimary}
-                </a>
-              </p>
-            </div>
+            </address>
           </div>
         </div>
 
@@ -152,10 +122,19 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-white/10">
-          <p className="text-xs text-on-primary-container text-center md:text-left">
+        {/* Regulatory line */}
+        <div className="mt-6 pt-6 border-t border-white/10 flex flex-col gap-2 text-xs text-on-primary-container/80">
+          <p className="flex flex-wrap gap-x-3 gap-y-1">
+            <span>AMFI Registered Mutual Fund Distributor · {SITE.arn}</span>
+            <span className="hidden sm:inline">|</span>
+            <span>Initial Registration · {SITE.arnInitialRegistration}</span>
+            <span className="hidden sm:inline">|</span>
+            <span>Current Validity · {SITE.arnValidity}</span>
+            <span className="hidden sm:inline">|</span>
+            <span>Grievance Officer · {SITE.grievanceOfficer}</span>
+          </p>
+          <p className="text-on-primary-container/60">
             © {new Date().getFullYear()} {SITE.legalName}. All rights reserved.
-            AMFI Registered Mutual Fund Distributor · {SITE.arn}.
           </p>
         </div>
       </div>
