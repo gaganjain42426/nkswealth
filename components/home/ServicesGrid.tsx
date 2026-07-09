@@ -20,7 +20,7 @@ export default function ServicesGrid() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {SERVICES.map((service, i) => (
             <ScrollReveal key={service.id} delay={i * 60}>
-              <div className="group relative overflow-hidden rounded-lg min-h-[26rem] flex flex-col justify-end">
+              <div className="group relative overflow-hidden rounded-lg h-full min-h-[26rem] flex flex-col">
                 {/* Background image */}
                 <Image
                   src={service.imageSrc}
@@ -29,31 +29,33 @@ export default function ServicesGrid() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/85 to-primary/30" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/85 to-primary/45" />
 
-                {/* Always-visible content */}
-                <div className="relative p-7 text-white">
-                  <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gold-accent mb-3">
-                    <span className="material-symbols-outlined text-lg">
+                {/* Always-visible content, spread to fill the card */}
+                <div className="relative p-7 text-white flex flex-col h-full">
+                  <span className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-gold-accent">
+                    <span className="material-symbols-outlined text-xl">
                       {service.icon}
                     </span>
                     {service.title}
                   </span>
-                  <h3 className="font-playfair text-2xl font-semibold mb-3 leading-snug">
-                    {service.tagline}
-                  </h3>
-                  <p className="text-sm text-primary-fixed-dim leading-relaxed mb-5">
-                    {service.description}
-                  </p>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white border-b border-gold-accent pb-0.5 hover:text-gold-accent transition-colors"
-                  >
-                    {service.cta}
-                    <span className="material-symbols-outlined text-base">
-                      arrow_forward
-                    </span>
-                  </Link>
+                  <div className="mt-auto pt-6">
+                    <h3 className="font-playfair text-2xl font-semibold mb-3 leading-snug">
+                      {service.tagline}
+                    </h3>
+                    <p className="text-base text-primary-fixed-dim leading-relaxed mb-5">
+                      {service.description}
+                    </p>
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-white hover:text-gold-accent transition-colors"
+                    >
+                      {service.cta}
+                      <span className="material-symbols-outlined text-base">
+                        arrow_forward
+                      </span>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </ScrollReveal>

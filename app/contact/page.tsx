@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import FAQAccordion from "@/components/contact/FAQAccordion";
 import { SITE } from "@/lib/data/site";
 
 export const metadata: Metadata = {
@@ -152,22 +151,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-20 bg-surface-container-low">
-        <div className="max-w-3xl mx-auto px-5 md:px-20">
-          <ScrollReveal className="text-center mb-12">
-            <h2 className="font-playfair text-3xl font-semibold text-primary mb-4">
-              Onboarding FAQ
-            </h2>
-            <p className="text-on-surface-variant text-sm leading-relaxed">
-              Common questions about starting your relationship with NKS Wealth.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal delay={80}>
-            <FAQAccordion />
-          </ScrollReveal>
-        </div>
-      </section>
     </>
   );
 }

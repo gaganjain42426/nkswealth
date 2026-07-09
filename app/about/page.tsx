@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import FounderQuote from "@/components/home/FounderQuote";
+import FAQAccordion from "@/components/contact/FAQAccordion";
 import { TEAM_MEMBERS } from "@/lib/data/team";
 
 export const metadata: Metadata = {
@@ -257,6 +258,23 @@ export default function AboutPage() {
         author="Nikhil Shah"
         title="Founder, NKS Wealth"
       />
+
+      {/* Onboarding FAQ */}
+      <section className="py-24 bg-surface-container-low">
+        <div className="max-w-3xl mx-auto px-5 md:px-20">
+          <ScrollReveal className="text-center mb-12">
+            <h2 className="font-playfair text-3xl md:text-4xl font-semibold text-primary mb-4">
+              Onboarding FAQ
+            </h2>
+            <p className="text-on-surface-variant text-sm leading-relaxed">
+              Common questions about starting your relationship with NKS Wealth.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={80}>
+            <FAQAccordion />
+          </ScrollReveal>
+        </div>
+      </section>
     </>
   );
 }

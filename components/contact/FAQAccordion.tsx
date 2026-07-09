@@ -34,12 +34,14 @@ export default function FAQAccordion() {
           <div
             className={cn(
               "overflow-hidden transition-all duration-300 ease-in-out",
-              openIndex === i ? "max-h-48" : "max-h-0"
+              openIndex === i ? "max-h-[40rem]" : "max-h-0"
             )}
           >
-            <p className="px-6 pb-5 text-sm text-charcoal-text/80 leading-relaxed border-t border-on-surface/5 pt-3">
-              {faq.answer}
-            </p>
+            <div className="px-6 pb-5 text-sm text-charcoal-text/80 leading-relaxed border-t border-on-surface/5 pt-3 space-y-3">
+              {faq.answer.map((paragraph, p) => (
+                <p key={p}>{paragraph}</p>
+              ))}
+            </div>
           </div>
         </div>
       ))}

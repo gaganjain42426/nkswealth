@@ -6,7 +6,6 @@ import ServicesGrid from "@/components/home/ServicesGrid";
 import InvestorJourney from "@/components/home/InvestorJourney";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import FounderQuote from "@/components/home/FounderQuote";
-import ContactSection from "@/components/home/ContactSection";
 
 export const metadata: Metadata = {
   title: "NKS Wealth | Premium Wealth Management for HNIs",
@@ -28,7 +27,6 @@ export default function HomePage() {
         author="Nikhil Shah"
         title="Founder, NKS Wealth"
       />
-      <ContactSection />
     </>
   );
 }
