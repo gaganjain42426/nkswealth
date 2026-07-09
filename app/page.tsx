@@ -8,7 +8,7 @@ import WhyChooseUs from "@/components/home/WhyChooseUs";
 import FounderQuote from "@/components/home/FounderQuote";
 
 export const metadata: Metadata = {
-  title: "NKS Wealth | Premium Wealth Management for HNIs",
+  title: "NKS Invest | Premium Wealth Management for HNIs",
   description:
     "AMFI-registered mutual fund distributor. Expert SIP, goal-based planning, NRI investments and insurance advisory with 20 years of market experience. Start your wealth journey today.",
 };
@@ -25,7 +25,7 @@ export default function HomePage() {
       <FounderQuote
         quote="We don't just distribute products — we build long-term relationships built on trust, transparency, and results."
         author="Nikhil Shah"
-        title="Founder, NKS Wealth"
+        title="Founder, NKS Invest"
       />
     </>
   );

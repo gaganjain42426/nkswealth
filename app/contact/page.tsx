@@ -4,7 +4,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import { SITE } from "@/lib/data/site";
 
 export const metadata: Metadata = {
-  title: "Contact NKS Wealth | Schedule a Free Consultation",
+  title: "Contact NKS Invest | Schedule a Free Consultation",
   description:
     "Schedule a complimentary consultation with a dedicated wealth advisor. Jaipur office and virtual meetings available.",
 };
@@ -80,7 +80,7 @@ export default function ContactPage() {
               <div className="relative w-full h-60 rounded-xl overflow-hidden shadow-indigo-soft border border-on-surface/5 group">
                 <Image
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDleGkEzkfX6RbT8-TiIpiH3DBxLbqLX6iS6HALzsiYqnQw2XkpsOYmOgB7HNQQMA-DU3ymMFRlFjfUgB590QFW1y3RDMLl7nBc64kF-5VW2Q6nL72pUzG332d1h4Z2-kVcWzC50l1V21bs-hpFAnwf-Yw_Aii7NHs4bqIlfqEgK0O5SNdufMfSfvzygeDmLsTVNgCUAEdkUYenr-OZteYW3-lPcCndS8zZvnRraidg46DbpnAhUi6jjpZYpOBGoCaUvBDwLtYjBBY"
-                  alt="NKS Wealth Jaipur Office Location"
+                  alt="NKS Invest Jaipur Office Location"
                   fill
                   className="object-cover filter grayscale opacity-60 mix-blend-multiply group-hover:scale-105 transition-transform duration-700"
                   sizes="(max-width: 1024px) 100vw, 40vw"

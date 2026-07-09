@@ -8,7 +8,7 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         <Image
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdft2yrJhNAGzXOVaslCNVOkp4pC4h1f-0jeprk5veE80O-rtqXDicFqYjEGSLl9P-URKCmptMf9VnQmcTUtIwVcKLSIRYGIxTdLbhCsJwvWgPW2Zm0xuh3OytBUnUr_K8jT5NOuG9MG7pPON0tWsAqcESPfe9GG8SoJ81uuPb1kSLxIWf7KQBBVDlIHFjR1YgLNowlc58BYgXHLDfkpjKXPXj1g0gGTpW6mh66nJl-liS8f9BabTbDFBm22BLzIJoJ1Rc0gAF-5Y"
-          alt="NKS Wealth - Premium Wealth Management"
+          alt="NKS Invest - Premium Wealth Management"
           fill
           priority
           className="object-cover object-center"

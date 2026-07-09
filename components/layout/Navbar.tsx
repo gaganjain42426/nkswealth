@@ -50,7 +50,7 @@ export default function Navbar() {
             href="/"
             className="font-playfair text-2xl font-bold text-primary hover:opacity-80 transition-opacity"
           >
-            NKS Wealth
+            NKS Invest
           </Link>
 
           {/* Desktop Links */}

@@ -48,7 +48,7 @@ export default function FoundersDesk() {
             </h2>
             <div className="space-y-4 text-primary-fixed-dim text-sm md:text-base leading-relaxed">
               <p>
-                At NKS Wealth, we believe that true wealth is not just about
+                At NKS Invest, we believe that true wealth is not just about
                 accumulating assets, but about securing the freedom to live life
                 on your terms. For over two decades, we have partnered with
                 individuals, families, and institutions to navigate the

@@ -6,9 +6,9 @@ import FAQAccordion from "@/components/contact/FAQAccordion";
 import { TEAM_MEMBERS } from "@/lib/data/team";
 
 export const metadata: Metadata = {
-  title: "About NKS Wealth | Our Story, Philosophy & Team",
+  title: "About NKS Invest | Our Story, Philosophy & Team",
   description:
-    "Built on integrity, transparency, and results. Meet the NKS Wealth founding team and learn how we have guided high-net-worth families across India for over a decade.",
+    "Built on integrity, transparency, and results. Meet the NKS Invest founding team and learn how we have guided high-net-worth families across India for over a decade.",
 };
 
 const PILLARS = [
@@ -72,7 +72,7 @@ export default function AboutPage() {
         <div className="absolute inset-0">
           <Image
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2wR-phQwBboZqrSKixqj7ARbmCMc5luvIvp226Yi6liWSEHTl5MKjWDYt0BCrCKfH9HapbRTdTDXHUevUeF3WSx4MyjAjETnz_ulfK3GoPaC1-lGaHTYqbIyvG3cGqoslyIiBo3wd5yvfjFF8-dfG6da6mpIe2GqeBPDd2kNzRDch1LHkfvH1A5xB1dPRxYtHV15189KHbnuptob_OrzKPQl1Jq1dH6nr3I_rxCl6yp5On6TYmwiuv6OfwndzZhoGXVuEVfL6-uA"
-            alt="NKS Wealth Office"
+            alt="NKS Invest Office"
             fill
             priority
             className="object-cover opacity-30"
@@ -112,7 +112,7 @@ export default function AboutPage() {
               Wealth Planning
             </h2>
             <p className="text-on-surface-variant leading-relaxed">
-              NKS Wealth was founded on a singular premise: that true wealth
+              NKS Invest was founded on a singular premise: that true wealth
               management extends far beyond simple asset allocation. It requires
               a profound understanding of family dynamics, generational
               aspirations, and the unique footprint you wish to leave on the
@@ -130,7 +130,7 @@ export default function AboutPage() {
             <div className="relative h-[480px] rounded-lg overflow-hidden shadow-indigo-medium group">
               <Image
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_KDnqAnKLtSnCP2pjMdpAzadk-a_l9fkBsJJrNpviFuhbgK8nBXWC9UWEYwVtzzlgJ-SCyC9d019ngLQplr0O2gxKP18gJOYahsXeTVgid89AlvJqF1cB5UazgusTPNFO_-O3Uss-20EL4vmeGrU3YnrdKUzvH1lflv83rRqHAbHNA27TuhC7zfklRzb_j0yGi8S4Z7NrzuC8lnuK4UjU0hHJhA3PkTSPsKdpTcdnBM-banyyZhms9CBZcoRb5MoutQ-aLPKk-i4"
-                alt="NKS Wealth team in boardroom"
+                alt="NKS Invest team in boardroom"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -256,7 +256,7 @@ export default function AboutPage() {
       <FounderQuote
         quote="True wealth is not merely the accumulation of capital, but the freedom and peace of mind it affords you and your family."
         author="Nikhil Shah"
-        title="Founder, NKS Wealth"
+        title="Founder, NKS Invest"
       />
 
       {/* Onboarding FAQ */}
@@ -267,7 +267,7 @@ export default function AboutPage() {
               Onboarding FAQ
             </h2>
             <p className="text-on-surface-variant text-sm leading-relaxed">
-              Common questions about starting your relationship with NKS Wealth.
+              Common questions about starting your relationship with NKS Invest.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={80}>

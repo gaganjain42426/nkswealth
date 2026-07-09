@@ -10,7 +10,7 @@ export const FAQS: FAQ[] = [
     id: "minimum-investment",
     question: "What is the minimum investment required?",
     answer: [
-      "There is no minimum investment requirement to begin your journey with NKS Wealth.",
+      "There is no minimum investment requirement to begin your journey with NKS Invest.",
       "Whether you're a young professional starting your first SIP, a business owner managing surplus capital, or a family seeking comprehensive wealth planning, our advice is tailored to your unique financial situation.",
       "We build personalized investment and protection strategies based on your income, expenses, existing assets, financial responsibilities, risk appetite, and long-term goals — not on the size of your portfolio. As your wealth grows, your financial plan evolves with you.",
     ],

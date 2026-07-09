@@ -22,8 +22,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://nkswealth.com"),
   title: {
-    default: "NKS Wealth | Premium Wealth Management for HNIs",
-    template: "%s | NKS Wealth",
+    default: "NKS Invest | Premium Wealth Management for HNIs",
+    template: "%s | NKS Invest",
   },
   description:
     "AMFI-registered wealth management tailored for high-net-worth individuals, business owners and working professionals. Expert SIP, goal-based planning and NRI investment advisory with 20 years of market experience.",
@@ -40,14 +40,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    siteName: "NKS Wealth",
-    title: "NKS Wealth | Premium Wealth Management for HNIs",
+    siteName: "NKS Invest",
+    title: "NKS Invest | Premium Wealth Management for HNIs",
     description:
       "AMFI-registered wealth management tailored for high-net-worth individuals.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "NKS Wealth | Premium Wealth Management",
+    title: "NKS Invest | Premium Wealth Management",
     description: "Institutional expertise. Personalised care. AMFI registered.",
   },
   robots: {

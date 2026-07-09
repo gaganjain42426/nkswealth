@@ -1,4 +1,4 @@
-/** Single source of truth for NKS Wealth contact & company details. */
+/** Single source of truth for NKS Invest contact & company details. */
 export const SITE = {
   legalName: "NKS Investment Services Private Limited",
   phonePrimary: "+91 96940 67366",

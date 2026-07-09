@@ -17,7 +17,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-5">
             <p className="font-playfair text-3xl font-bold text-gold-accent mb-4">
-              NKS Wealth
+              NKS Invest
             </p>
             <p className="text-sm text-primary-fixed-dim leading-relaxed max-w-sm mb-4">
               Guiding your financial future with institutional expertise and
