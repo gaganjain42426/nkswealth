@@ -23,7 +23,7 @@ const CONTACT_ITEMS = [
   {
     icon: "mail",
     label: "Email Connect",
-    value: `${SITE.emailNikhil}, ${SITE.emailShubham}`,
+    value: SITE.email,
   },
 ];
 
@@ -133,14 +133,14 @@ export default function ContactPage() {
                     </span>
                   </a>
                   <a
-                    href={`mailto:${SITE.emailNikhil}`}
+                    href={`mailto:${SITE.email}`}
                     className="flex items-center gap-4 w-full border border-primary/20 text-primary px-6 py-5 rounded-lg font-semibold hover:border-gold-accent hover:text-gold-accent transition-colors"
                   >
                     <span className="material-symbols-outlined text-2xl">mail</span>
                     <span>
                       <span className="block text-base">Email Us</span>
                       <span className="block text-xs font-normal opacity-70">
-                        {SITE.emailNikhil}, {SITE.emailShubham}
+                        {SITE.email}
                       </span>
                     </span>
                   </a>

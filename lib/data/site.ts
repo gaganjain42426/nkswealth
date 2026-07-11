@@ -6,10 +6,7 @@ export const SITE = {
   phonePrimaryTel: "+919694067366",
   phoneSecondaryTel: "+917055318084",
   whatsapp: "https://wa.me/919694067366",
-  emailPrimary: "nikhil@nkswealth.in",
-  emailHello: "hello@nkswealth.in",
-  emailNikhil: "nikhil@nkswealth.com",
-  emailShubham: "shubham@nkswealth.com",
+  email: "nikhil@nksinvest.in",
   city: "Jaipur",
   address: {
     line1: "Plot No. 40, Flat No. 201, Prem Nagar Vistar",

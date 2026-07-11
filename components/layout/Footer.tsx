@@ -77,8 +77,8 @@ export default function Footer() {
                 <span className="material-symbols-outlined text-gold-accent text-lg shrink-0">
                   mail
                 </span>
-                <a href={`mailto:${SITE.emailHello}`} className="hover:text-white transition-colors">
-                  {SITE.emailHello}
+                <a href={`mailto:${SITE.email}`} className="hover:text-white transition-colors">
+                  {SITE.email}
                 </a>
               </p>
               <p className="flex gap-3">
