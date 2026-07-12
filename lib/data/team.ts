@@ -12,12 +12,12 @@ export const TEAM_MEMBERS: TeamMember[] = [
   {
     id: "nikhil-shah",
     name: "Nikhil Shah",
-    role: "Founder & Chief Wealth Advisor",
+    role: "Founder",
     bio: "With over 18 years of experience in the financial services industry, Nikhil brings deep expertise in mutual funds, wealth creation, and market dynamics. As the driving force behind NKS Invest, he has built long-standing relationships with families, business owners, and investors through a trust-first advisory approach. His extensive market knowledge and disciplined investment philosophy help clients make informed financial decisions aligned with their long-term goals.",
     linkedIn: "#",
     imageSrc:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuCOFto-UW9Dm4d-nE5wABU-w8sT-_cVmg6jhzkW28-feciEvafhKosnYRfVYldeRtU19DwpX6lZQaYN2SzKc7v1U5eJrt14F0d7wkL4hCbtoHOojtHw1JuLMRnSJYmvZHAlc3nx4My_sFTkMv2D-LIpwGXxp_1rc828VwyTW_U2LuE3FR42VnYrHsUmDiivvNov2s1Enl5cMjYrJEBUIAVnwZQKd5v340CyYau9OcItWiD7ar1Ah8b2wGoVGimURP34D6R8lNdyAWA",
-    imageAlt: "Nikhil Shah - Founder & Chief Wealth Advisor",
+    imageAlt: "Nikhil Shah - Founder",
   },
   {
     id: "shubham-shah",
