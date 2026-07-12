@@ -54,11 +54,6 @@ const WHY_CARDS = [
     title: "Modern Institutional Technology",
     desc: "We leverage cutting-edge financial technology to provide real-time, consolidated reporting, ensuring total visibility over your wealth architecture.",
   },
-  {
-    icon: "gavel",
-    title: "Unbiased, Independent Advice",
-    desc: "As AMFI Registered Mutual Fund Advisors, we have no proprietary products to push. Our recommendations are driven solely by what serves your mandate best.",
-  },
 ];
 
 export default function AboutPage() {

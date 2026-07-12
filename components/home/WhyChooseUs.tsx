@@ -12,11 +12,6 @@ const REASONS = [
     desc: "Product recommendations driven solely by merit and alignment with your goals.",
   },
   {
-    icon: "person_search",
-    title: "Personalised Planning",
-    desc: "Bespoke strategies tailored to your unique risk appetite and financial objectives.",
-  },
-  {
     icon: "devices",
     title: "Digital-First",
     desc: "Seamless onboarding and real-time portfolio tracking through our client portal.",
@@ -36,7 +31,7 @@ export default function WhyChooseUs() {
           </p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {REASONS.map((r, i) => (
             <ScrollReveal key={r.title} delay={i * 80} className="text-center">
               <div className="w-16 h-16 mx-auto bg-primary-fixed rounded-full flex items-center justify-center mb-5 text-primary">

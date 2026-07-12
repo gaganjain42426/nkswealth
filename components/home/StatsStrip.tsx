@@ -13,7 +13,6 @@ const STATS: Stat[] = [
   { prefix: "₹", target: 100, suffix: "Cr+", label: "Assets Under Management" },
   { target: 700, suffix: "+", label: "Satisfied Investors" },
   { target: 20, suffix: "Yrs", label: "Market Experience" },
-  { target: 100, suffix: "%", label: "Unbiased Advice" },
 ];
 
 const DURATION = 1600;
@@ -76,7 +75,7 @@ export default function StatsStrip() {
   return (
     <section ref={sectionRef} className="bg-primary py-16">
       <div className="max-w-[1280px] mx-auto px-5 md:px-20">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-primary-fixed-dim/20">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center sm:divide-x divide-primary-fixed-dim/20">
           {STATS.map((stat) => (
             <StatItem key={stat.label} stat={stat} start={start} />
           ))}
