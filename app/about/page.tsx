@@ -220,7 +220,7 @@ export default function AboutPage() {
             {TEAM_MEMBERS.map((member, i) => (
               <ScrollReveal key={member.id} delay={i * 100}>
                 <article className="bg-surface rounded-lg p-3 shadow-indigo-soft border border-charcoal-text/5 group hover:-translate-y-1 transition-transform duration-300 h-full">
-                  <div className="w-full aspect-[4/5] rounded overflow-hidden bg-surface-variant mb-4">
+                  <div className="relative w-full aspect-[4/5] rounded overflow-hidden bg-surface-variant mb-4">
                     <Image
                       src={member.imageSrc}
                       alt={member.imageAlt}
@@ -228,6 +228,9 @@ export default function AboutPage() {
                       height={600}
                       className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
                     />
+                    <span className="absolute top-3 left-3 w-9 h-9 rounded-full bg-primary/90 text-white font-playfair text-lg font-semibold flex items-center justify-center shadow-indigo-soft">
+                      {i + 1}
+                    </span>
                   </div>
                   <div className="px-2 pb-3">
                     <h3 className="font-playfair text-2xl font-semibold text-primary mb-1">
