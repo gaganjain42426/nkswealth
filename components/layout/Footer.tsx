@@ -132,6 +132,15 @@ export default function Footer() {
             <span>Current Validity · {SITE.arnValidity}</span>
             <span className="hidden sm:inline">|</span>
             <span>Grievance Officer · {SITE.grievanceOfficer}</span>
+            <span className="hidden sm:inline">|</span>
+            <a
+              href={SITE.arnCertificate}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 hover:text-white transition-colors"
+            >
+              View ARN Certificate
+            </a>
           </p>
           <p className="text-on-primary-container/60">
             © {new Date().getFullYear()} {SITE.legalName}. All rights reserved.

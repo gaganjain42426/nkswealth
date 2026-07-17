@@ -216,7 +216,7 @@ export default function AboutPage() {
               Meet the leadership driving our vision forward.
             </p>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {TEAM_MEMBERS.map((member, i) => (
               <ScrollReveal key={member.id} delay={i * 100}>
                 <article className="bg-surface rounded-lg p-3 shadow-indigo-soft border border-charcoal-text/5 group hover:-translate-y-1 transition-transform duration-300 h-full">

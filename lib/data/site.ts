@@ -13,7 +13,8 @@ export const SITE = {
     line2: "Durgapura, Jaipur, Rajasthan, India, 302018",
   },
   arn: "ARN-345665",
-  arnInitialRegistration: "17/11/2026",
+  arnInitialRegistration: "17/11/2025",
   arnValidity: "16/11/2028",
   grievanceOfficer: "Nikhil Shah",
+  arnCertificate: "/docs/nks-arn-certificate.pdf",
 } as const;
