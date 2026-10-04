@@ -7,6 +7,7 @@ const EXPLORE_LINKS = [
   { href: "/about", label: "Our Story" },
   { href: "/about#team", label: "Our Team" },
   { href: "/contact", label: "Contact" },
+  { href: "/statutory-disclosures", label: "Statutory Disclosures" },
 ];
 
 export default function Footer() {
@@ -125,6 +126,8 @@ export default function Footer() {
         {/* Regulatory line */}
         <div className="mt-6 pt-6 border-t border-white/10 flex flex-col gap-2 text-xs text-on-primary-container/80">
           <p className="flex flex-wrap gap-x-3 gap-y-1">
+            <span>CIN · {SITE.cin}</span>
+            <span className="hidden sm:inline">|</span>
             <span>AMFI Registered Mutual Fund Distributor · {SITE.arn}</span>
             <span className="hidden sm:inline">|</span>
             <span>Initial Registration · {SITE.arnInitialRegistration}</span>
@@ -141,6 +144,13 @@ export default function Footer() {
             >
               View ARN Certificate
             </a>
+            <span className="hidden sm:inline">|</span>
+            <Link
+              href="/statutory-disclosures"
+              className="underline underline-offset-2 hover:text-white transition-colors"
+            >
+              Statutory Disclosures
+            </Link>
           </p>
           <p className="text-on-primary-container/60">
             © {new Date().getFullYear()} {SITE.legalName}. All rights reserved.
